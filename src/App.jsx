@@ -88,7 +88,10 @@ function App() {
           <div className="mt30"></div>
           <h2 className="heading regular">Button</h2>
           <div className="mt10"></div>
-          <button className="btn regular pink">SEARCH</button>
+          <button className="btn regular pink">.btn.regular.pink</button>
+          <br />
+          <br />
+          <button className="btn regular pink ico1">.btn.regular.pink.ico1</button>
           <div className="mt30"></div>
 
           {/* 폼 */}
@@ -156,8 +159,40 @@ function App() {
           </ul>
           <h2 className="heading small  mt30">listView</h2>
           <div className="mt10"></div>
-
           <ul className="movie-list list">
+            <li>
+              <a href="">
+                <div className="movie-list__info">
+                  <div className="movie-list__poster">
+                    <img
+                      src="https://demo.gloriathemes.com/noxe/demo/wp-content/uploads/2020/02/title-image-12-1255x790.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <div className="movie-list__title">제목</div>
+                  <div className="movie-list__year">2024</div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <div className="movie-list__info">
+                  <div className="movie-list__poster">
+                    <img
+                      src="https://demo.gloriathemes.com/noxe/demo/wp-content/uploads/2020/02/title-image-12-1255x790.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <div className="movie-list__title">제목</div>
+                  <div className="movie-list__year">2024</div>
+                </div>
+              </a>
+            </li>
+          </ul>
+
+          <h2 className="heading small  mt30">popularView</h2>
+          <div className="mt10"></div>
+          <ul className="movie-list popular">
             <li>
               <a href="">
                 <div className="movie-list__info">
