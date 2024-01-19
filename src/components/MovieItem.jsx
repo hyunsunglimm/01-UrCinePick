@@ -4,7 +4,7 @@ export default function MovieItem({ movie }) {
       <a href="">
         <div className="movie-list__info">
           <div className="movie-list__poster">
-            <img src={movie.Poster} alt="" />
+            <img src={movie.Poster.replace("300", "700")} alt="" />
           </div>
           <div className="movie-list__title">{movie.Title}</div>
           <div className="movie-list__year">{movie.Year}</div>
