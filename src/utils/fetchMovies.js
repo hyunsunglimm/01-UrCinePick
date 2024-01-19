@@ -14,7 +14,10 @@ export const fetchMovies = async (paramIds, setter) => {
   }
 };
 
-export const fetchSearchMovies = async ({ text, year, type }, setter) => {
+export const fetchSearchMovies = async (
+  { text, year = "Year", type = "Type" },
+  setter
+) => {
   try {
     const validYear = year === "Year" ? "" : year;
     const validType = type === "Type" ? "" : type;

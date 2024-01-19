@@ -1,7 +1,11 @@
-export default function MegaMenu() {
+export default function MegaMenu({ isMegaMenuOpen, setIsMegaMenuOpen }) {
   return (
-    <div className="megamenu">
-      <button className="btn-close" aria-label="닫기"></button>
+    <div className={`megamenu ${isMegaMenuOpen && "open"}`}>
+      <button
+        className="btn-close"
+        aria-label="닫기"
+        onClick={() => setIsMegaMenuOpen(false)}
+      ></button>
       <nav>
         <ul className="megamenu__list">
           <li>

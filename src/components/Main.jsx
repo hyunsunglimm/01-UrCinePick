@@ -4,8 +4,9 @@ import Thumbnail from "./Thumbnail";
 import { movieIds } from "../hardcode/movieId";
 import { useEffect, useState } from "react";
 import { fetchMovies } from "../utils/fetchMovies";
+import DetailView from "./DetailView";
 
-export default function Main() {
+export default function Main({ headerSearchMovies }) {
   const [movies, setMovies] = useState([]);
 
   useEffect(() => {
@@ -23,12 +24,11 @@ export default function Main() {
         <div className="movie-list__year">2024</div>
         <Thumbnail />
         <SearchBar setMovies={setMovies} />
-        {movies ? (
-          <MovieList movies={movies} />
+
+        {headerSearchMovies.length > 0 ? (
+          <DetailView headerSearchMovies={headerSearchMovies} />
         ) : (
-          <p style={{ fontSize: "50px", color: "white" }}>
-            찾으시는 영화가 없습니다.
-          </p>
+          <MovieList movies={movies} />
         )}
       </div>
     </main>
